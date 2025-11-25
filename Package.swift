@@ -11,7 +11,7 @@ let package = Package(
         .watchOS(.v6)
     ],
     products: [
-        .library(name: "Arra", targets: ["Arra"])
+        .library(name: "Arra", path: "Sources")
     ],
     targets : [
         .target(name: "Arra", dependencies: []),
