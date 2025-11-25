@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7AB70B002ED626B100C609EF /* Arra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB70AF42ED626B100C609EF /* Arra.framework */; };
 		7AB70B0F2ED62B6900C609EF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7AB70B0E2ED62B6200C609EF /* README.md */; };
+		7AB70B1E2ED630B000C609EF /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB70B1D2ED630AE00C609EF /* Package.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +26,7 @@
 		7AB70AF42ED626B100C609EF /* Arra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Arra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AB70AFF2ED626B100C609EF /* ArraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AB70B0E2ED62B6200C609EF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7AB70B1D2ED630AE00C609EF /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -62,6 +64,7 @@
 		7AB70AEA2ED626B100C609EF = {
 			isa = PBXGroup;
 			children = (
+				7AB70B1D2ED630AE00C609EF /* Package.swift */,
 				7AB70B0E2ED62B6200C609EF /* README.md */,
 				7AB70AF62ED626B100C609EF /* Arra */,
 				7AB70B032ED626B100C609EF /* ArraTests */,
@@ -198,6 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AB70B1E2ED630B000C609EF /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
