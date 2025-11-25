@@ -6,7 +6,7 @@ Some of the extensions are :
 
 - `getOrNil`
 
-| This will get the value of at a certain index if it exists else default to nil
+> This will get the value of at a certain index if it exists else default to nil
 
 ```swift
     let array = [1,2,3]
