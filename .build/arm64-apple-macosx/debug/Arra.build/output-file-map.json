@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/Arra.build/master.swiftdeps"
+  },
+  "/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/Sources/Arra/Arra.swift": {
+    "dependencies": "/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/Arra.build/Arra.d",
+    "object": "/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/Arra.build/Arra.swift.o",
+    "swiftmodule": "/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/Arra.build/Arra~partial.swiftmodule",
+    "swift-dependencies": "/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/Arra.build/Arra.swiftdeps",
+    "diagnostics": "/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/Arra.build/Arra.dia"
+  }
+}

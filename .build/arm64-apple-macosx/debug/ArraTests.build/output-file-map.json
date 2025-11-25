@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/ArraTests.build/master.swiftdeps"
+  },
+  "/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/Tests/ArraTests/ArraTests.swift": {
+    "dependencies": "/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/ArraTests.build/ArraTests.d",
+    "object": "/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/ArraTests.build/ArraTests.swift.o",
+    "swiftmodule": "/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/ArraTests.build/ArraTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/ArraTests.build/ArraTests.swiftdeps",
+    "diagnostics": "/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/ArraTests.build/ArraTests.dia"
+  }
+}

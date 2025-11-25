@@ -1,0 +1,112 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "Arra-arm64-apple-macosx15.0-debug.module": ["<Arra-arm64-apple-macosx15.0-debug.module>"]
+  "ArraPackageTests-arm64-apple-macosx15.0-debug.module": ["<ArraPackageTests-arm64-apple-macosx15.0-debug.module>"]
+  "ArraPackageTests-arm64-apple-macosx15.0-debug.test": ["<ArraPackageTests-arm64-apple-macosx15.0-debug.test>"]
+  "ArraTests-arm64-apple-macosx15.0-debug.module": ["<ArraTests-arm64-apple-macosx15.0-debug.module>"]
+  "PackageStructure": ["<PackageStructure>"]
+  "main": ["<Arra-arm64-apple-macosx15.0-debug.module>"]
+  "test": ["<Arra-arm64-apple-macosx15.0-debug.module>","<ArraPackageTests-arm64-apple-macosx15.0-debug.test>","<ArraTests-arm64-apple-macosx15.0-debug.module>"]
+default: "main"
+nodes:
+  "/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/Sources/Arra/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/Tests/ArraTests/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+commands:
+  "/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/Arra.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/Sources/Arra/Arra.swift"]
+    outputs: ["/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/Arra.build/sources"]
+    description: "Write auxiliary file /Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/Arra.build/sources"
+
+  "/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/ArraPackageTests.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/ArraPackageTests.derived/runner.swift"]
+    outputs: ["/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/ArraPackageTests.build/sources"]
+    description: "Write auxiliary file /Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/ArraPackageTests.build/sources"
+
+  "/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/ArraPackageTests.derived/runner.swift":
+    tool: test-entry-point-tool
+    inputs: []
+    outputs: ["/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/ArraPackageTests.derived/runner.swift"]
+
+  "/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/ArraPackageTests.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/Arra.build/Arra.swift.o","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/ArraPackageTests.build/runner.swift.o","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/ArraTests.build/ArraTests.swift.o"]
+    outputs: ["/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/ArraPackageTests.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/ArraPackageTests.product/Objects.LinkFileList"
+
+  "/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/ArraTests.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/Tests/ArraTests/ArraTests.swift"]
+    outputs: ["/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/ArraTests.build/sources"]
+    description: "Write auxiliary file /Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/ArraTests.build/sources"
+
+  "/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"]
+    outputs: ["/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+
+  "<Arra-arm64-apple-macosx15.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/Arra.build/Arra.swift.o","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/Modules/Arra.swiftmodule"]
+    outputs: ["<Arra-arm64-apple-macosx15.0-debug.module>"]
+
+  "<ArraPackageTests-arm64-apple-macosx15.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/ArraPackageTests.build/runner.swift.o","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/Modules/ArraPackageTests.swiftmodule"]
+    outputs: ["<ArraPackageTests-arm64-apple-macosx15.0-debug.module>"]
+
+  "<ArraPackageTests-arm64-apple-macosx15.0-debug.test>":
+    tool: phony
+    inputs: ["/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/ArraPackageTests.xctest/Contents/MacOS/ArraPackageTests"]
+    outputs: ["<ArraPackageTests-arm64-apple-macosx15.0-debug.test>"]
+
+  "<ArraTests-arm64-apple-macosx15.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/ArraTests.build/ArraTests.swift.o","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/Modules/ArraTests.swiftmodule"]
+    outputs: ["<ArraTests-arm64-apple-macosx15.0-debug.module>"]
+
+  "C.Arra-arm64-apple-macosx15.0-debug.module":
+    tool: shell
+    inputs: ["/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/Sources/Arra/Arra.swift","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/Arra.build/sources"]
+    outputs: ["/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/Arra.build/Arra.swift.o","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/Modules/Arra.swiftmodule"]
+    description: "Compiling Swift Module 'Arra' (1 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","Arra","-emit-dependencies","-emit-module","-emit-module-path","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/Modules/Arra.swiftmodule","-output-file-map","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/Arra.build/output-file-map.json","-parse-as-library","-incremental","-c","@/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/Arra.build/sources","-I","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx10.15","-v","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j12","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/Arra.build/include/Arra-Swift.h","-color-diagnostics","-swift-version","6","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.1.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.1.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","arra"]
+
+  "C.ArraPackageTests-arm64-apple-macosx15.0-debug.module":
+    tool: shell
+    inputs: ["/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/ArraPackageTests.derived/runner.swift","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/Modules/ArraTests.swiftmodule","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/ArraPackageTests.build/sources"]
+    outputs: ["/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/ArraPackageTests.build/runner.swift.o","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/Modules/ArraPackageTests.swiftmodule"]
+    description: "Compiling Swift Module 'ArraPackageTests' (1 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","ArraPackageTests","-emit-dependencies","-emit-module","-emit-module-path","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/Modules/ArraPackageTests.swiftmodule","-output-file-map","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/ArraPackageTests.build/output-file-map.json","-parse-as-library","-incremental","-c","@/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/ArraPackageTests.build/sources","-I","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx10.15","-v","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-Xfrontend","-enable-cross-import-overlays","-j12","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/ArraPackageTests.build/include/ArraPackageTests-Swift.h","-color-diagnostics","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.1.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.1.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","arra"]
+
+  "C.ArraPackageTests-arm64-apple-macosx15.0-debug.test":
+    tool: shell
+    inputs: ["/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/Arra.build/Arra.swift.o","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/ArraPackageTests.build/runner.swift.o","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/ArraTests.build/ArraTests.swift.o","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/ArraPackageTests.product/Objects.LinkFileList"]
+    outputs: ["/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/ArraPackageTests.xctest/Contents/MacOS/ArraPackageTests"]
+    description: "Linking ./.build/arm64-apple-macosx/debug/ArraPackageTests.xctest/Contents/MacOS/ArraPackageTests"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-v","-L","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug","-o","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/ArraPackageTests.xctest/Contents/MacOS/ArraPackageTests","-module-name","ArraPackageTests","-Xlinker","-no_warn_duplicate_libraries","-Xlinker","-bundle","-Xlinker","-rpath","-Xlinker","@loader_path/../../../","@/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/ArraPackageTests.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift-6.2/macosx","-target","arm64-apple-macosx14.0","-Xlinker","-add_ast_path","-Xlinker","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/Modules/Arra.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/Modules/ArraPackageTests.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/Modules/ArraTests.swiftmodule","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.1.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g"]
+
+  "C.ArraTests-arm64-apple-macosx15.0-debug.module":
+    tool: shell
+    inputs: ["/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/Tests/ArraTests/ArraTests.swift","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/Modules/Arra.swiftmodule","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/ArraTests.build/sources"]
+    outputs: ["/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/ArraTests.build/ArraTests.swift.o","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/Modules/ArraTests.swiftmodule"]
+    description: "Compiling Swift Module 'ArraTests' (1 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","ArraTests","-emit-dependencies","-emit-module","-emit-module-path","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/Modules/ArraTests.swiftmodule","-output-file-map","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/ArraTests.build/output-file-map.json","-parse-as-library","-incremental","-c","@/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/ArraTests.build/sources","-I","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx14.0","-v","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-Xfrontend","-enable-cross-import-overlays","-j12","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-color-diagnostics","-swift-version","6","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.1.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.1.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","arra"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/Sources/Arra/","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/Tests/ArraTests/","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/Package.swift","/Users/brian.odhiambo/Documents/bizi/swift/arra/Arra/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

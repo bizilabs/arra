@@ -46,17 +46,24 @@
 		7AB70B3A2ED632AA00C609EF /* SampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		7AB70B512ED638C600C609EF /* Exceptions for "Tests" folder in "Arra" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ArraTests/ArraTests.swift,
+			);
+			target = 7AB70AF32ED626B100C609EF /* Arra */;
+		};
+		7AB70B522ED638C600C609EF /* Exceptions for "Tests" folder in "ArraTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ArraTests/ArraTests.swift,
+			);
+			target = 7AB70AFE2ED626B100C609EF /* ArraTests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		7AB70AF62ED626B100C609EF /* Arra */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Arra;
-			sourceTree = "<group>";
-		};
-		7AB70B032ED626B100C609EF /* ArraTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ArraTests;
-			sourceTree = "<group>";
-		};
 		7AB70B252ED632A900C609EF /* Sample */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Sample;
@@ -70,6 +77,20 @@
 		7AB70B3D2ED632AA00C609EF /* SampleUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = SampleUITests;
+			sourceTree = "<group>";
+		};
+		7AB70B4D2ED638C100C609EF /* Tests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				7AB70B512ED638C600C609EF /* Exceptions for "Tests" folder in "Arra" target */,
+				7AB70B522ED638C600C609EF /* Exceptions for "Tests" folder in "ArraTests" target */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		7AB70B532ED638D500C609EF /* Sources */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -117,10 +138,10 @@
 		7AB70AEA2ED626B100C609EF = {
 			isa = PBXGroup;
 			children = (
+				7AB70B532ED638D500C609EF /* Sources */,
+				7AB70B4D2ED638C100C609EF /* Tests */,
 				7AB70B1D2ED630AE00C609EF /* Package.swift */,
 				7AB70B0E2ED62B6200C609EF /* README.md */,
-				7AB70AF62ED626B100C609EF /* Arra */,
-				7AB70B032ED626B100C609EF /* ArraTests */,
 				7AB70B252ED632A900C609EF /* Sample */,
 				7AB70B332ED632AA00C609EF /* SampleTests */,
 				7AB70B3D2ED632AA00C609EF /* SampleUITests */,
@@ -167,7 +188,8 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				7AB70AF62ED626B100C609EF /* Arra */,
+				7AB70B4D2ED638C100C609EF /* Tests */,
+				7AB70B532ED638D500C609EF /* Sources */,
 			);
 			name = Arra;
 			packageProductDependencies = (
@@ -188,9 +210,6 @@
 			);
 			dependencies = (
 				7AB70B022ED626B100C609EF /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				7AB70B032ED626B100C609EF /* ArraTests */,
 			);
 			name = ArraTests;
 			packageProductDependencies = (
@@ -306,7 +325,6 @@
 			mainGroup = 7AB70AEA2ED626B100C609EF;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				7AB70B4B2ED6335400C609EF /* XCRemoteSwiftPackageReference "arra" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 7AB70AF52ED626B100C609EF /* Products */;
@@ -704,7 +722,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.7;
@@ -748,7 +766,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.7;
@@ -929,17 +947,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		7AB70B4B2ED6335400C609EF /* XCRemoteSwiftPackageReference "arra" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/bizilabs/arra";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 7AB70AEB2ED626B100C609EF /* Project object */;
 }
