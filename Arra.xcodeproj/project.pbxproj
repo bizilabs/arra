@@ -11,6 +11,7 @@
 		7AB70B0F2ED62B6900C609EF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7AB70B0E2ED62B6200C609EF /* README.md */; };
 		7AB70B1E2ED630B000C609EF /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB70B1D2ED630AE00C609EF /* Package.swift */; };
 		7AB70B6F2ED63C8A00C609EF /* .gitignore in Sources */ = {isa = PBXBuildFile; fileRef = 7AB70B6E2ED63C8400C609EF /* .gitignore */; };
+		7AB70B722ED63D1600C609EF /* Arra in Frameworks */ = {isa = PBXBuildFile; productRef = 7AB70B712ED63D1600C609EF /* Arra */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AB70B722ED63D1600C609EF /* Arra in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +240,7 @@
 			);
 			name = Sample;
 			packageProductDependencies = (
+				7AB70B712ED63D1600C609EF /* Arra */,
 			);
 			productName = Sample;
 			productReference = 7AB70B242ED632A900C609EF /* Sample.app */;
@@ -328,6 +331,7 @@
 			mainGroup = 7AB70AEA2ED626B100C609EF;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
+				7AB70B702ED63D1600C609EF /* XCRemoteSwiftPackageReference "arra" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 7AB70AF52ED626B100C609EF /* Products */;
@@ -951,6 +955,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7AB70B702ED63D1600C609EF /* XCRemoteSwiftPackageReference "arra" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/bizilabs/arra";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7AB70B712ED63D1600C609EF /* Arra */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7AB70B702ED63D1600C609EF /* XCRemoteSwiftPackageReference "arra" */;
+			productName = Arra;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7AB70AEB2ED626B100C609EF /* Project object */;
 }

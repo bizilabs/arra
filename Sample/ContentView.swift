@@ -16,7 +16,7 @@ struct ContentView: View {
         List {
             ForEach(self.array, id: \.self) { value in
                 let index = array.getOrNil(Int.random(in: 0..<6))
-                Text("\(String(describing: index))")
+                Text("\(index)")
             }
         }
         .padding()

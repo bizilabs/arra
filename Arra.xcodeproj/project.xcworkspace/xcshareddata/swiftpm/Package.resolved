@@ -1,0 +1,15 @@
+{
+  "originHash" : "f7820e2fb49b02bded93c86d598661e0d9c5657ac1c498f45b50524e7a45ebac",
+  "pins" : [
+    {
+      "identity" : "arra",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/bizilabs/arra",
+      "state" : {
+        "revision" : "86e73299b951be73f05f85454c4e45e4eabbec1f",
+        "version" : "1.2.0"
+      }
+    }
+  ],
+  "version" : 3
+}
